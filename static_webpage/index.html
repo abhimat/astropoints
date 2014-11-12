@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<!--
+ 
+      Temporary, static Astropoints page by Abhimat Gautam.
+  
+-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<!-- Source Sans Web Font -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+		<meta name=viewport content='width=device-width, initial-scale=1'>
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		
+		body {
+			color: #444444;
+			background: #ffffff;
+			font-family: 'Source Sans Pro', Verdana, Sans-Serif;
+			font-size: 100%;
+			line-height: 1.5;
+			font-weight: 400;
+			text-rendering: optimizeLegibility;
+			font-feature-settings: "kern" on;
+		}
+		
+		h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+			font-family: Futura, 'Century Gothic', AppleGothic, sans-serif;
+			text-rendering: optimizeLegibility;
+			font-feature-settings: "kern" on;
+		}
+		
+		h1, h2, .h1, .h2 {
+			font-weight: 400;
+			line-height: 1.25;
+			margin-top: .5em;
+		}
+		
+		h1, .h1 {
+			font-size: 24px;
+		}
+		
+		h2, .h2 {
+			font-size: 18px;
+		}
+		
+		h3, .h3 {
+			font-size: 16px;
+		}
+		
+		h1+h2 { margin-top: 0; }
+		
+		p, .p, ul, ol, table {
+			font-size: 16px;
+		}
+		
+		small, .small {
+			font-size: 14px;
+		}
+		
+		semibold, .semibold {
+			font-weight: 600;
+		}
+		
+		strong, .strong {
+			font-weight: 700;
+		}
+		
+		ultrabold, .ultrabold {
+			font-weight: 900;
+		}
+		
+		p, ul, ol, table { margin-top: 1em; }
+		
+		@media screen and (min-width: 480px) {
+			h1, .h1 { font-size: 48px; }
+			h2, .h2 { font-size: 26px; }
+			h3, .h3 { font-size: 20px; }
+			p, .p, ul, ol, table { font-size: 20px;}
+			small, .small { font-size: 16px;}
+		}	
+		
+		@media screen and (min-width: 640px) {
+			h1, .h1 { font-size: 64px; }
+			h2, .h2 { font-size: 28px; } 
+			h3, .h3 { font-size: 20px; }
+		}
+		
+		
+		.wrap {
+			width: 90%;
+			padding: 0 5%;
+			max-width: 48em;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+	 	article {
+			margin-top: 4em;
+	 	}
+		
+		a {
+			color: #009999;
+			text-decoration: none;
+		}
+		
+		a:hover {
+			text-decoration: underline;
+		}
+		
+		header {
+			width: 90%;
+			padding: 2em 5% 0;
+			max-width: 48em;
+			margin: 0 auto;
+			overflow: hidden;
+			text-align: center;
+		}
+		
+		header:after {
+			clear: both;
+			content: '.';
+			display: block;
+			height: 0;
+			visibility: hidden;
+	 	}
+		
+		.logo {
+			float: left;
+			margin-right: 1em;
+		}
+		
+		header h1 {
+			padding-bottom: 0.1em;
+		}
+		
+		header h1, header p {
+			margin: 0;
+		}
+		
+		header a, a.block-title {
+			color: #444444;
+		}
+		
+		a.block-title:hover {
+			text-decoration: none;
+			color: #009999;
+	  	}
+		
+		header a:hover {
+			/*text-decoration: none;*/
+		}
+		
+		
+		.block ul, .block ol {
+			margin-left: 2em;
+		}
+		
+		.block footer ul, .block footer ol {
+			margin: 0;
+		}
+		
+		.block table {
+			margin-left: 0.5em;
+			border-width: 1px;	
+		}
+		
+		.block table td {
+			padding: 0.5em;
+		}
+		
+		.block footer {
+			padding: 0;
+			margin-top: 1em;
+			color: #aaa;
+			font-style: italic;
+		}
+		
+		.block footer a {
+			color: #aaa;
+		}
+		
+		.block footer a:hover {
+			color: #999;
+		}
+		
+		.block footer .source {
+			float: right;
+			margin-right: 0;
+			font-style: italic;
+		}
+		
+		.block footer ul li {
+			display: inline-block;
+			margin-right: 1em;
+		}
+	  	
+		.tags {
+			margin-top: 1em;
+		}
+		
+		.pagination {
+			margin-top: 4em;
+			text-align: center;
+			line-height: 3em;
+		}
+		
+		.pagination:after {
+			clear: both;
+			content: '.';
+			display: block;
+			height: 0;
+			visibility: hidden;
+		}
+		
+		.pagination a {
+			display: block;
+			height: 3em;
+			padding: 0 1em;
+			border-radius: 0.25em;
+		}
+		
+		.pagination a:hover {
+			background: #eee;
+			text-decoration: none;
+		}
+		
+		.pagination .previous {
+			float: left;
+		}
+		
+		.pagination .next {
+			float: right;
+		}
+		
+		footer.wrap {
+			padding-top: 2em;
+			padding-bottom: 2em;
+		}
+		
+		ul.pages {
+			list-style: none;
+		}
+		
+		ul.pages li {
+			display: inline-block;
+			margin-right: 1em;
+			margin-left: 1em;
+		}
+		
+		ul.pages li a {
+			display: block;
+			height: 3em;
+			line-height: 3em;
+		}
+			
+		</style>
+	
+		<!-- MathJax -->
+		<script type="text/javascript"
+		  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		
+		<!-- GoSquared -->
+		<!-- <script>
+		  !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+		  arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+		  d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+		  insertBefore(d,q)}(window,document,'script','_gs');
+
+		  _gs('GSN-820289-I');
+		</script> -->
+</head>
+<body>
+	<header>
+		<h1>AstroPoints</h1>
+		<p><semibold>Since betting with real money is <em>probably</em> unethical…</semibold></p>
+	</header>
+	
+	<div class="content wrap">
+		<section class="blocks">
+			
+			<article class="block">
+				<h2><center>Total AstroPoints in Circulation<center></h2>
+				<p>\[0 \text{ AstroPoints}\]</p>
+			</article> <!-- /block -->
+			
+			<article class="block">
+				<h2><center>AstroPoints Owners</center></h2>
+				<p>
+					<center><table>
+						<tr><td>Jesus</td>	<td>\[0\text{ AstroPoints}\]</td></tr>
+						<tr><td>Alexander</td>	<td>\[0\text{ AstroPoints}\]</td></tr>
+						<tr><td>Rick</td>	<td>\[\lim_{x \rightarrow \infty} \frac{x^7 + 2x^3 - 9}{12 x^8 - 14x^{2.5} + 2} \text{ AstroPoints}\]</td></tr>
+						<tr><td>Kiera</td>	<td>\[0 \pm 10^{6} \text{ AstroPoints}\]</td></tr>
+						<tr><td>Danny</td>	<td>\[0\text{ AstroPoints}\]</td></tr>
+						<tr><td>Anowar</td>	<td>\[e^{i \pi} + 1\text{ AstroPoints}\]</td></tr>
+						<tr><td>Abhimat</td>	<td>\[\log (1)\text{ AstroPoints}\]</td></tr>
+						<tr><td>Michael</td>	<td>\[\frac{7}{5}(\infty^2)^{-\infty^2}\text{ AstroPoints}\]</td></tr>
+						<tr><td>Devin ^.^v</td>	<td>\[0\times10^{10^{{10}^{{10}^{10}}}}\text{ AstroPoints}\]</td></tr>
+						<tr><td>Alec</td>	<td>\[0\text{ AstroPoints}\]</td></tr>
+						<tr><td>Pauline</td>	<td>\[0\text{ AstroPoints}\]</td></tr>
+						<tr><td>Breann</td>     <td>\[0\text{ AstroPoints}\]</td></tr>
+					</table></center>
+				</p>
+			</article> <!-- /block -->
+			
+		</section> <!-- /blocks -->
+	</div> <!-- /content -->
+	
+	<footer class="small wrap">
+		<center><p class="small">A temporary, static home!<br>&copy; 2014 SuperMegaEvil Corp.</p></center>
+	</footer>
+</body>
+</html>
